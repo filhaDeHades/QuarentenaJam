@@ -16,8 +16,8 @@ Começamos a criação do jogo por...
 - [ ] tarefa 3
 
 # Integrantes do Grupo:
-[Amanda Melo]()
-[Eduardo Motta](https://github.com/Dudu-Motta "Perfil do Eduardo")
-[Gabriel Vieira]()
-[Pedro Lanzarini]()
-[Tamires da Hora](https://github.com/filhaDeHades "Perfil da Tamires")
+- [Amanda Melo]()
+- [Eduardo Motta](https://github.com/Dudu-Motta "Perfil do Eduardo")
+- [Gabriel Vieira]()
+- [Pedro Lanzarini]()
+- [Tamires da Hora](https://github.com/filhaDeHades "Perfil da Tamires")
