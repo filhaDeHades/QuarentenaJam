@@ -11,13 +11,13 @@ Temos como objetivo criar um jogo para a **Quarentine Jam** cujo tema é ---, es
 Começamos a criação do jogo por...
 
 ## Checklist:
-- [] tarefa 1
-- [] tarefa 2
-- [] tarefa 3
+- [X] tarefa 1
+- [ ] tarefa 2
+- [ ] tarefa 3
 
 # Integrantes do Grupo:
 [Amanda Melo] ()
-[Eduardo Motta] (https://github.com/Dudu-Motta "Perfil do Eduardo")
+[Eduardo Motta] (https://github.com/Dudu-Motta)
 [Gabriel Vieira] ()
 [Pedro Lanzarini] ()
-[Tamires da Hora] (https://github.com/filhaDeHades "Perfil da Tamires")
+[Tamires da Hora] (https://github.com/filhaDeHades)
