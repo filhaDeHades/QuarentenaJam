@@ -18,8 +18,11 @@ Ajude-o a chegar o mais longe possível.
 
 ## Checklist:
 - [X] Definir o tipo do jogo.
-- [ ] tarefa 2
-- [ ] tarefa 3
+- [ ] Criar o menu de Iniciar (Dudu)
+- [ ] Criar o menu de Pausa (Amanda)
+- [ ] Design dos personagens (Vieira e Lanza)
+- [ ] Criar o menu de Configuração (Rafaela)
+- [ ] Criar o menu de Créditos (Tamires)
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")
