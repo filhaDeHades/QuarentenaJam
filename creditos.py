@@ -7,7 +7,7 @@ height = 80
 class Creditos:
     def __init__(self):
         pyxel.init(width, height, caption="Créditos")
-        pyxel.load("assets/creditos.pyxres")
+        pyxel.load("assets/Desenho G.pyxres")
         pyxel.run(self.update, self.draw)
 
     def update(self):
@@ -16,7 +16,7 @@ class Creditos:
 
     def draw(self):
         pyxel.cls(3)
-        pyxel.blt(width/2-16, height/16, 0, 0, 0, 32, 8, 0)
+        pyxel.blt(width/200, height/200, 0, 0, 0, 32, 8, 0)
 
 
 
