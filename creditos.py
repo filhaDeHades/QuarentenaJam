@@ -4,12 +4,12 @@ width = 180
 height = 80
 var = height
 seta = [[0, 8], [8, 8]]
-animSeta = 0
+animSeta = 1
 
 credito = ['Desenvolvedores:', 'Amanda Melo', 'Eduardo Motta', 'Gabriel Vieira', 'Pedro Lanzarini', 'Rafaela', 'Tamires da Hora','', 'Musica:', 'Amanda Melo', 'Gabriel Vieira', '', 'Arte:', 'Gabriel Vieira', 'Pedro Lanzarini']
 credAlt = []
 
-maior = 0
+maior = 1
 for i in range(len(credito)):
     c = var+10*i
     credAlt.append(c)
@@ -21,7 +21,7 @@ class Creditos:
     def __init__(self):
         
         pyxel.init(width, height, caption="Créditos")
-        pyxel.load("assets/Desenho G.pyxres")
+        pyxel.load("assets/creditos.pyxres")
         pyxel.run(self.update, self.draw)
 
     def update(self):
@@ -39,8 +39,8 @@ class Creditos:
         if pyxel.mouse_x > 3 and pyxel.mouse_x < 11:
             if pyxel.mouse_y > height/16 and pyxel.mouse_y < height/16+8:
                 animSeta = 1
-        else:
-            animSeta = 0
+            else:
+                animSeta = 0
 
 
     def draw(self):
