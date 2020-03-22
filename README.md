@@ -23,6 +23,9 @@ Ajude-o a chegar o mais longe possível.
 - [ ] Design dos personagens (Vieira e Lanza)
 - [ ] Criar o menu de Configuração (Rafaela)
 - [ ] Criar o menu de Créditos (Tamires)
+    - [ ] Adicionar a base da rolagem dos nomes (Tamires)
+    - [ ] Adicionar o desaparecimento ao chegar no título (Tamires)
+    - [ ] Adicionar loop infinito
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")
