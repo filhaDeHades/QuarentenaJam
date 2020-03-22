@@ -21,7 +21,7 @@ class Creditos:
     def __init__(self):
         
         pyxel.init(width, height, caption="Créditos")
-        pyxel.load("assets/creditos.pyxres")
+        pyxel.load("assets/Desenho G.pyxres")
         pyxel.run(self.update, self.draw)
 
     def update(self):
@@ -49,6 +49,7 @@ class Creditos:
         pyxel.blt(width/2-16, height/16, 0, 0, 0, 32, 8, 0)
         for i, j, k in zip(credito, credAlt, range(len(credito))):
             pyxel.text(width/3, j, i, 10)
+
 
 
 
