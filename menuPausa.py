@@ -18,6 +18,7 @@ class Pause:
             pyxel.stop(0)
 
     def update(self):
+        pyxel.mouse(True)
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
 
