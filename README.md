@@ -19,7 +19,7 @@ Ajude-o a chegar o mais longe possível.
 ## Checklist:
 - [X] Definir o tipo do jogo.
 - [X] Criar o menu de Iniciar (Dudu)
-- [ ] Criação do Corona
+- [ ] Criação do Corona (Dudu)
     - [X] Adicionar e configurar os comandos
     - [x] Design do Corona
     - [ ] Adicionar área de morte do Corona
