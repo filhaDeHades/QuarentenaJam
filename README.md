@@ -18,16 +18,28 @@ Ajude-o a chegar o mais longe possível.
 
 ## Checklist:
 - [X] Definir o tipo do jogo.
-- [ ] Criar o menu de Iniciar (Dudu)
-- [ ] Criar o menu de Pausa (Amanda)
+- [X] Criar o menu de Iniciar (Dudu)
+- [ ] Criação do Corona (Dudu)
+    - [X] Adicionar e configurar os comandos
+    - [x] Design do Corona
+    - [ ] Adicionar área de morte do Corona
+- [X] Criar o menu de Pausa (Amanda)
 - [ ] Design dos personagens (Vieira e Lanza)
-- [ ] Criar o menu de Configuração (Rafaela)
+- [ ] Criar o menu de Configuração (Amanda)
+    - [ ] Add a configuração da música a tela iniciar (Amanda)
 - [ ] Criar o menu de Créditos (Tamires)
+    - [X] Adicionar a base da rolagem dos nomes (Tamires)
+    - [X] Adicionar o desaparecimento ao chegar no título (Tamires)
+    - [X] Adicionar loop infinito (Tamires)
+- [ ] Criar tela-mãe do jogo (Tamires)
+    - [X] Add tela do Menu Iniciar
+    - [x] Add tela do Menu de Pausa
+    - [ ] Add tela do Jogo
+    - [X] Add tela de Créditos
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")
 - [Eduardo Motta](https://github.com/Dudu-Motta "Perfil do Eduardo")
 - [Gabriel Vieira](https://github.com/gabrielvieira12 "Perfil do Gabriel")
 - [Pedro Lanzarini](https://github.com/Pedro-Lanza "Perfil do Pedro")
-- [Rafaela]()
 - [Tamires da Hora](https://github.com/filhaDeHades "Perfil da Tamires")
