@@ -6,7 +6,7 @@ var = height
 seta = [[0, 8], [8, 8]]
 animSeta = 1
 
-credito = ['Desenvolvedores:', 'Amanda Melo', 'Eduardo Motta', 'Gabriel Vieira', 'Pedro Lanzarini', 'Rafaela', 'Tamires da Hora','', 'Musica:', 'Amanda Melo', 'Gabriel Vieira', '', 'Arte:', 'Gabriel Vieira', 'Pedro Lanzarini']
+credito = ['Desenvolvedores:', 'Amanda Melo', 'Eduardo Motta', 'Gabriel Vieira', 'Pedro Lanzarini', 'Tamires da Hora','', 'Musica:', 'Amanda Melo', 'Gabriel Vieira', '', 'Arte:', 'Gabriel Vieira', 'Pedro Lanzarini']
 credAlt = []
 
 maior = 1
