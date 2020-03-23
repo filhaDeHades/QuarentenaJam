@@ -2,7 +2,7 @@ import pyxel
 
 class Creditos:
     var = 0
-    seta = [[0, 8], [8, 8]]
+    seta = [[32, 0], [32, 8]]
     animSeta = 0
     height = 0
     width = 0
@@ -16,9 +16,6 @@ class Creditos:
         self.width = w
         
         self.preencherAlturas()
-        #pyxel.init(self.width, self.height, caption="Créditos")
-        
-        #pyxel.run(self.update, self.draw)
 
     def update(self):
         pyxel.mouse(True)
@@ -43,7 +40,7 @@ class Creditos:
     def draw(self):
         pyxel.cls(3)
         pyxel.blt(3, self.height/16, 0, self.seta[self.animSeta][0], self.seta[self.animSeta][1], 8, 8, 0)
-        pyxel.blt(self.width/2-16, self.height/16, 0, 0, 0, 32, 8, 0)
+        pyxel.blt(self.width/2-16, self.height/16, 0, 0, 24, 29, 5, 0)
         for i, j, k in zip(self.credito, self.credAlt, range(len(self.credito))):
             pyxel.text(self.width/3, j, i, 10)
     

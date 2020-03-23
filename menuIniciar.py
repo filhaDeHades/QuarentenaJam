@@ -1,15 +1,12 @@
 import pyxel
 
-pause = ['']
-width = 180
-height = 80
-
-class INICIAR:
-    def __init__(self):
-        pyxel.init(180, 80, caption="INICIAR")
-        pyxel.load("assets/menu.pyxres")
-        self.play_music (True)
-        pyxel.run(self.update, self.draw)
+class Iniciar:
+    width = 0
+    height = 0
+    def __init__(self, w, h):
+        self.width = w
+        self.height = h
+        #self.play_music(True)
 
     def play_music(self, ch0):
         if ch0:
@@ -17,16 +14,15 @@ class INICIAR:
         else:
             pyxel.stop(0)
 
-    def update(self):
+    def update(self):        
+        pyxel.mouse(True)
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
 
-        if pyxel.btnp(pyxel.KEY_1):
-            self.play_music (True)
+        #if pyxel.btn(pyxel.KEY_1):
+            #self.play_music(True)
 
     def draw(self):
         pyxel.cls(3)
         pyxel.text(75, 30, "INICIAR", pyxel.frame_count % 16)
-        pyxel.blt(width/2-16, height/2, 0, 0, 0, 32, 50, 0)
-        
-INICIAR()
+        pyxel.blt(self.width/2-16, self.height/2, 0, 0, 0, 32, 50, 0)
