@@ -10,5 +10,9 @@ class Coronajogador:
     def draw(self):
         pyxel.blt(self.x, self.y, 0, self.anim[0], self.anim[1], 15, 15, 0)
     def update(self):
-        pyxel.btn(pyxel.KEY_SPACE)
+        if pyxel.btn(pyxel.KEY_SPACE):
+            self.y = self.y -16
+
+        else:
+            self.y = self.y +gravit
 
