@@ -6,8 +6,8 @@ height = 80
 
 class Pause:
     def __init__(self):
-        #pyxel.init(180, 80, caption="PAUSADO")
-        pyxel.load("assets/musicpause.pyxres")
+        pyxel.init(180, 80, caption="PAUSADO")
+        pyxel.load("assets/pause.pyxres")
         self.play_music (True)
         #pyxel.run(self.update, self.draw)
 
