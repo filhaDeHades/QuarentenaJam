@@ -22,3 +22,5 @@ class Coronajogador:
             self.estado(True)
     def estado(self,jorge): 
         self.vivo = jorge
+
+Coronajogador()
