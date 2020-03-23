@@ -6,9 +6,9 @@ height = 80
 
 class Menuiniciar:
     def __init__(self):
-        pyxel.init(width, height, caption="menu")
+        #pyxel.init(width, height, caption="menu")
         pyxel.load("assets/menu.pyxres")
-        pyxel.run(self.update, self.draw)
+        #pyxel.run(self.update, self.draw)
 
     def update(self):
         if pyxel.btnp(pyxel.KEY_Q):
