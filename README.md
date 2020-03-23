@@ -32,6 +32,10 @@ Ajude-o a chegar o mais longe possível.
     - [X] Adicionar o desaparecimento ao chegar no título (Tamires)
     - [X] Adicionar loop infinito (Tamires)
 - [ ] Criar tela-mãe do jogo (Tamires)
+    - [X] Add tela do Menu Iniciar
+    - [x] Add tela do Menu de Pausa
+    - [ ] Add tela do Jogo
+    - [X] Add tela de Créditos
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")

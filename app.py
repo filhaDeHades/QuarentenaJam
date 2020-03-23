@@ -1,12 +1,12 @@
 import pyxel
 import menuIniciar as mi
-#import menuPausa
+import menuPausa as mp
 #simport jogo
 import creditos as c
 
 class App:
-    stat = "MENU"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
-    status = [mi.Iniciar(180, 80), c.Creditos(180, 80)]
+    stat = "PAUSA"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
+    status = [mi.Iniciar(180, 80), mp.Pause(180, 80), c.Creditos(180, 80)]
     width = 0
     height = 0
     def __init__(self, w, h):
@@ -22,7 +22,7 @@ class App:
             pyxel.quit()
         if pyxel.btn(pyxel.KEY_1):
             self.stat = "PAUSA"
-            
+
         if self.stat == "MENU":
             self.status[0].update()
         elif self.stat == "PAUSA":
