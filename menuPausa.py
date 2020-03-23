@@ -9,7 +9,6 @@ class Pause:
         pyxel.init(180, 80, caption="PAUSADO")
         pyxel.load("assets/musicpause.pyxres")
         self.play_music (True)
-        pyxel.load("assets/restodopause.pyxres")
         pyxel.run(self.update, self.draw)
 
     def play_music(self, ch0):
@@ -19,6 +18,7 @@ class Pause:
             pyxel.stop(0)
 
     def update(self):
+        pyxel.mouse(True)
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
 
