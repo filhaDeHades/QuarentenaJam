@@ -1,5 +1,5 @@
 import pyxel
-gravit = 2
+gravit = 1
 
 class Coronajogador:
     x = 0
@@ -13,9 +13,9 @@ class Coronajogador:
         pyxel.blt(self.x, self.y, 0, self.anim[0], self.anim[1], 16, 16, 3)
     def update(self):
         if pyxel.btn(pyxel.KEY_SPACE):
-            self.y = max(self.y -16 , 0)
+            self.y = max(self.y -4.3 , 0)
         else:
-            self.y = min(self.y +gravit, 80)
+            self.y = min(self.y +gravit, 67)
         
         if self.y >= 80:
             self.estado(False)
