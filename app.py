@@ -20,8 +20,8 @@ class App:
     def update(self):
         if pyxel.btn(pyxel.KEY_Q):
             pyxel.quit()
-        if pyxel.btn(pyxel.KEY_1):
-            self.stat = "PAUSA"
+
+        self.mudaEstado()
 
         if self.stat == "MENU":
             self.status[0].update()
@@ -30,7 +30,7 @@ class App:
         elif self.stat == "JOGO":
             self.status[2].update()
         elif self.stat == "CREDITOS":
-            self.status[3].update()
+            self.status[2].update()
 
     def draw(self):
         pyxel.cls(3)
@@ -41,6 +41,33 @@ class App:
         elif self.stat == "JOGO":
             self.status[2].draw()
         elif self.stat == "CREDITOS":
-            self.status[3].draw()
+            self.status[2].draw()
+    
+    def mudaEstado(self):
+        if self.stat == "MENU":
+            prox = self.status[0].mouse()
+            if prox[0] == True:
+                if prox[1] == 0: #Música ON
+                    pass
+                elif prox[1] == 1: #Música OFF
+                    pass
+                elif prox[1] == 2: #Creditos
+                    self.stat = "CREDITOS"
+        elif self.stat == "PAUSA":
+            prox = self.status[1].mouse()
+            if prox[0] == True:
+                if prox[1] == 0: #Música ON
+                    pass
+                elif prox[1] == 1: #Música OFF
+                    pass
+                elif prox[1] == 2: #JOGAR
+                    self.stat = "JOGO"
+                elif prox[1] == 3: #SAIR
+                    self.stat = "MENU"
+        elif self.stat == "CREDITOS":
+            prox = self.status[2].mouse()
+            if prox[0] == True:
+                if prox[1] == 0: #VOLTAR
+                    self.stat = "MENU"
 
 App(180, 80)

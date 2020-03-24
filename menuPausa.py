@@ -18,7 +18,6 @@ class Pause:
         pyxel.mouse(True)
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
-        self.mouse()
 
         #if pyxel.btnp(pyxel.KEY_1):
             #self.play_music (True)
@@ -33,16 +32,18 @@ class Pause:
         if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+8:
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12: #MÚSICA ON
-                    print([True, 0])
-            elif pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
+                    return [True, 0]
+            if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12:
-                    print([True, 1])
-            elif pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+18: #JOGAR
+                    return [True, 1]
+            if pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+18: #JOGAR
                 if pyxel.mouse_y >= self.height/4*3 and pyxel.mouse_y <= (self.height/4*3)+4:
-                    print([True, 2])
-            elif pyxel.mouse_x >= self.width/2-18+10 and pyxel.mouse_x <= (self.width/2-18)+21: #SAIR N FUNCIONA
-                if pyxel.mouse_y >= (self.height/4*3)+8 and pyxel.mouse_y <= (self.height/4*3)+13:
-                    print([True, 3])
+                    return [True, 2]
+            if pyxel.mouse_x >= self.width/2-18+10 and pyxel.mouse_x <= self.width/2-18+21: #SAIR N FUNCIONA
+                if pyxel.mouse_y >= (self.height/4*3)+9 and pyxel.mouse_y <= (self.height/4*3)+14:
+                    return [True, 3]
+        
+        return [False]
                 
         
 #Pause(180, 80)

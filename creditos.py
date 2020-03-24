@@ -40,7 +40,8 @@ class Creditos:
     def draw(self):
         pyxel.cls(3)
         pyxel.blt(3, self.height/16, 0, self.seta[self.animSeta][0], self.seta[self.animSeta][1], 8, 8, 0)
-        pyxel.blt(self.width/2-16, self.height/16, 0, 0, 24, 29, 5, 0)
+        pyxel.text(self.width/2-16, self.height/16, "CREDITOS", pyxel.frame_count % 16)
+        #pyxel.blt(self.width/2-16, self.height/16, 0, 0, 24, 29, 5, 0)
         for i, j, in zip(self.credito, self.credAlt,):
             pyxel.text(self.width/3, j, i, 10)
     
@@ -51,3 +52,12 @@ class Creditos:
             self.credAlt.append(c)
             if maior < c:
                 maior = c
+    
+    def mouse(self):
+        if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
+            if pyxel.mouse_x >= 3 and pyxel.mouse_x <= 11:
+                if pyxel.mouse_y >= self.height/16 and pyxel.mouse_y <= self.height/16+8: #VOLTAR
+                    print([True, 0])
+                    return [True, 0]
+        
+        return [False]
