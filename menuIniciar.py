@@ -6,7 +6,7 @@ class Iniciar:
     def __init__(self, w, h):
         self.width = w
         self.height = h
-        #self.play_music(True)
+        self.play_music(True)
 
     def play_music(self, ch0):
         if ch0:
@@ -19,8 +19,8 @@ class Iniciar:
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
 
-        #if pyxel.btn(pyxel.KEY_1):
-            #self.play_music(True)
+        if pyxel.btn(pyxel.KEY_1):
+            self.play_music(True)
 
     def draw(self):
         pyxel.cls(3)
