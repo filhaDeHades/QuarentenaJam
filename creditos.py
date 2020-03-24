@@ -41,7 +41,6 @@ class Creditos:
         pyxel.cls(3)
         pyxel.blt(3, self.height/16, 0, self.seta[self.animSeta][0], self.seta[self.animSeta][1], 8, 8, 0)
         pyxel.text(self.width/2-16, self.height/16, "CREDITOS", pyxel.frame_count % 16)
-        #pyxel.blt(self.width/2-16, self.height/16, 0, 0, 24, 29, 5, 0)
         for i, j, in zip(self.credito, self.credAlt,):
             pyxel.text(self.width/3, j, i, 10)
     
