@@ -6,10 +6,7 @@ class Pause:
     def __init__(self, w, h):
         self.width = w
         self.height = h
-        #pyxel.init(180, 80, caption="PAUSADO")
-        #pyxel.load("assets/menu.pyxres")
         #self.play_music (True)
-       # pyxel.run(self.update, self.draw)
 
     def play_music(self, ch0):
         if ch0:
@@ -30,5 +27,23 @@ class Pause:
         pyxel.text(75, 10, "PAUSADO", pyxel.frame_count % 16)
         pyxel.blt(self.width/2-16, self.height/2, 0, 0, 0, 28, 16, 0)
         pyxel.blt(self.width/2-18, self.height/4*3, 0, 40, 0, 32, 16, 0)
+    
+    def mouse(self):
+        if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
+            if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+8:
+                if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12: #MÚSICA ON
+                    return [True, 0]
+            if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
+                if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12:
+                    return [True, 1]
+            if pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+18: #JOGAR
+                if pyxel.mouse_y >= self.height/4*3 and pyxel.mouse_y <= (self.height/4*3)+4:
+                    return [True, 2]
+            if pyxel.mouse_x >= self.width/2-18+10 and pyxel.mouse_x <= self.width/2-18+21: #SAIR N FUNCIONA
+                if pyxel.mouse_y >= (self.height/4*3)+9 and pyxel.mouse_y <= (self.height/4*3)+14:
+                    return [True, 3]
+        
+        return [False]
+                
         
 #Pause(180, 80)

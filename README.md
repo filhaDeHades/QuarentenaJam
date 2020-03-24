@@ -25,7 +25,7 @@ Ajude-o a chegar o mais longe possível.
     - [ ] Adicionar área de morte do Corona
 - [X] Criar o menu de Pausa (Amanda)
 - [ ] Design dos personagens (Vieira e Lanza)
-- [ ] Criar o menu de Configuração (Amanda)
+- [ ] ~~Criar o menu de Configuração (Amanda)~~
     - [ ] Add a configuração da música a tela iniciar (Amanda)
 - [ ] Criar o menu de Créditos (Tamires)
     - [X] Adicionar a base da rolagem dos nomes (Tamires)
