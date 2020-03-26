@@ -11,6 +11,7 @@ class Coronajogador:
         self.y = y
     def draw(self):
         pyxel.blt(self.x, self.y, 0, self.anim[0], self.anim[1], 16, 16, 3)
+
     def update(self):
         if pyxel.btn(pyxel.KEY_SPACE):
             self.y = max(self.y -4.3 , 0)

@@ -13,6 +13,7 @@ class App:
         self.width = w
         self.height = h
         pyxel.init(self.width, self.height)
+        pyxel.load("assets/BReCHN.pyxres")
         pyxel.load("assets/menu.pyxres")
         pyxel.run(self.update, self.draw)
 
