@@ -18,7 +18,7 @@ class Jogo:
 
     def draw(self):
         pyxel.cls(3)
-        pyxel.blt(0, 0, 2, 0, 0, 180, 80)
+        pyxel.blt(0, 0, 1, 0, 0, 180, 80)
         self.player.draw()
     
     def mouse(self):
