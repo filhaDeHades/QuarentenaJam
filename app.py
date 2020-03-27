@@ -52,6 +52,8 @@ class App:
                     pass
                 elif prox[1] == 2: #Creditos
                     self.stat = "CREDITOS"
+                elif prox[1] == 3: #Iniciar
+                    self.stat = "JOGO"
         
         elif self.stat == "PAUSA":
             prox = self.status[1].mouse()
