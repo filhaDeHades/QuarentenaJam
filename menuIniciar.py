@@ -31,16 +31,13 @@ class Iniciar:
         if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= self.width/2-8:
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12: #MÚSICA ON
-                    print([True, 0])
                     return [True, 0]
                     
             if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12:
-                    print([True, 1])
                     return [True, 1]
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+29: #Creditos
                 if pyxel.mouse_y >= self.height/2+25 and pyxel.mouse_y <= self.height/2+29:
-                    print([True, 2])
                     return [True, 2]
         
         return [False]

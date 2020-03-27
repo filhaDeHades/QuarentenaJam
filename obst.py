@@ -2,15 +2,16 @@ import pyxel
 from random import randint
 
 class Obstaculos:
-    posY = [0, 16, 32, 48, 64] #Posições fixas do Y
     obsX = 0
     obsY = 0
     obsSpeed = -1
-    objeto = randint(0,3)
-    tipo = [[0,112],[16, 112],[32, 112],[48, 112]]
+    objeto = 0
+    tipo = [[0,112],[16, 112],[32, 112],[48, 112], [64, 112], [80, 112], [96, 112], [112,112]]
     state = "PERDEU"
-    def __init__(self, estado):
+    def __init__(self, estado, y, img):
+        self.obsY = y
         self.state = estado
+        self.objeto = img
     
     def update(self):
         if self.state == "JOGANDO":
