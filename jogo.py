@@ -20,6 +20,8 @@ class Jogo:
             i.setX(180)
 
     def update(self):
+        
+        pyxel.mouse(False)
         self.contframes += 1
         if self.contframes == 60:
             self.contframes = 0
@@ -33,6 +35,10 @@ class Jogo:
         for i in self.objetos:
             i.update()
             i.setState("JOGANDO")
+        for i in range(len(self.objetos)):
+            if self.objetos[i].obsX < -16:
+                del(self.objetos[i])
+                break
 
     def draw(self):
         pyxel.cls(3)

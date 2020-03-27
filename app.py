@@ -5,7 +5,7 @@ import jogo as j
 import creditos as c
 
 class App:
-    stat = "JOGO"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
+    stat = "PAUSA"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
     status = [mi.Iniciar(180, 80), mp.Pause(180, 80), j.Jogo(180, 80), c.Creditos(180, 80)]
     width = 0
     height = 0
@@ -13,7 +13,6 @@ class App:
         self.width = w
         self.height = h
         pyxel.init(self.width, self.height)
-        #pyxel.load("assets/BReCHN.pyxres")
         pyxel.load("assets/menu.pyxres")
         pyxel.run(self.update, self.draw)
 
