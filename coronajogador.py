@@ -1,5 +1,5 @@
 import pyxel
-gravit = 1
+gravit = 0.8
 
 class Coronajogador:
     x = 0
@@ -14,7 +14,8 @@ class Coronajogador:
 
     def update(self):
         if pyxel.btnr(pyxel.KEY_SPACE):
-            self.y = max(self.y -12 , 0)
+            self.y = max(self.y -4 , 0)
+            self.y = max(self.y -4 , 0)
         else:
             self.y = min(self.y +gravit, 67)
         

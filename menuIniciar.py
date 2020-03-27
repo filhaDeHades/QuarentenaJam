@@ -6,7 +6,7 @@ class Iniciar:
     def __init__(self, w, h):
         self.width = w
         self.height = h
-        #self.play_music(True)
+       # self.play_music(True) 
 
     def play_music(self, ch0):
         if ch0:
@@ -20,7 +20,7 @@ class Iniciar:
             pyxel.quit()
 
         #if pyxel.btn(pyxel.KEY_1):
-        #   self.play_music(True)
+           # self.play_music(True)
 
     def draw(self):
         pyxel.cls(3)
@@ -31,16 +31,17 @@ class Iniciar:
         if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= self.width/2-8:
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12: #MÚSICA ON
-                    print([True, 0])
                     return [True, 0]
                     
             if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
                 if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12:
-                    print([True, 1])
                     return [True, 1]
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+29: #Creditos
                 if pyxel.mouse_y >= self.height/2+25 and pyxel.mouse_y <= self.height/2+29:
-                    print([True, 2])
                     return [True, 2]
+            if pyxel.mouse_x >= 75 and pyxel.mouse_x <= 103: #Iniciar
+                if pyxel.mouse_y >= 30 and pyxel.mouse_y <= 35:
+                    print([True, 3])
+                    return [True, 3]
         
         return [False]
