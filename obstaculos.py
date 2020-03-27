@@ -53,11 +53,7 @@ class obstaculos:
             if self.obst_act[i] == True:
                 self.obst_x[i] += obst_speed
     #second obstáculo            
-<<<<<<< HEAD
             if  self.obst_act[i+5] == False and self.obst_act[i] == True:
-=======
-            if  self.obst_act[i+5] == False and self.obst_act[i] == True and self.obst_x[i] >= obst_dis :
->>>>>>> 505d3b9e215fd4483b6dc36eb0a7e16c471788a0
                 self.obst_reset(i+5,i)
             if self.obst_act[i+5] == True:
                 self.obst_x[i+5] += obst_speed
