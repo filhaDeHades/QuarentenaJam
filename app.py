@@ -120,7 +120,7 @@ class App:
                     self.status[2].reset()
                     self.stat = "JOGO"
                     self.soundChange = True
-                elif prox[1] == 2: #SAIR
+                elif prox[1] == 3: #SAIR
                     self.stat = "MENU"
                     self.soundChange = True
     

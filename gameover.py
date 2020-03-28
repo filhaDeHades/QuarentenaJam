@@ -32,14 +32,14 @@ class GameOver:
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+8:
                 if pyxel.mouse_y >= self.height/2+6 and pyxel.mouse_y <= (self.height/2)+10: #MÚSICA ON
                     return [True, 0]
-            if pyxel.mouse_x >= self.width/2 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
+            if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
                 if pyxel.mouse_y >= self.height/2+6 and pyxel.mouse_y <= (self.height/2)+10:
                     return [True, 1]
-            if pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+18: #JOGAR
+            if pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+26: #JOGAR
                 if pyxel.mouse_y >= self.height/4*3 and pyxel.mouse_y <= (self.height/4*3)+4:
                     return [True, 2]
-            if pyxel.mouse_x >= self.width/2-18+10 and pyxel.mouse_x <= self.width/2-18+21: #SAIR
-                if pyxel.mouse_y >= (self.height/4*3)+9 and pyxel.mouse_y <= (self.height/4*3)+14:
+            if pyxel.mouse_x >= self.width/2-18+9 and pyxel.mouse_x <= self.width/2-18+22: #SAIR
+                if pyxel.mouse_y >= (self.height/4*3)+8 and pyxel.mouse_y <= (self.height/4*3)+12:
                     return [True, 3]
         
         return [False]
