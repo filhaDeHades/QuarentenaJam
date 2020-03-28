@@ -3,10 +3,11 @@ import menuIniciar as mi
 import menuPausa as mp
 import jogo as j
 import creditos as c
+import gameover as go
 
 class App:
-    stat = "MENU"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
-    status = [mi.Iniciar(180, 80), mp.Pause(180, 80), j.Jogo(180, 80), c.Creditos(180, 80)]
+    stat = "MENU"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS"; "GAMEOVER";
+    status = [mi.Iniciar(180, 80), mp.Pause(180, 80), j.Jogo(180, 80), c.Creditos(180, 80), go.GameOver(180, 80)]
     width = 0
     height = 0
     def __init__(self, w, h):
@@ -30,6 +31,8 @@ class App:
             self.status[2].update()
         elif self.stat == "CREDITOS":
             self.status[3].update()
+        elif self.stat == "GAMEOVER":
+            self.status[4].update()
 
     def draw(self):
         pyxel.cls(3)
@@ -41,6 +44,8 @@ class App:
             self.status[2].draw()
         elif self.stat == "CREDITOS":
             self.status[3].draw()
+        elif self.stat == "GAMEOVER":
+            self.status[4].draw()
     
     def mudaEstado(self):
         if self.stat == "MENU":
@@ -77,6 +82,16 @@ class App:
             prox = self.status[3].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #VOLTAR
+                    self.stat = "MENU"
+        
+        elif self.stat == "GAMEOVER":
+            prox = self.status[4].mouse()
+            if prox[0] == True:
+                if prox[1] == 0: #Música ON
+                    pass
+                elif prox[1] == 1: #Música OFF
+                    pass
+                elif prox[1] == 2: #SAIR
                     self.stat = "MENU"
 
 App(180, 80)

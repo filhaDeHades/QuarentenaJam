@@ -28,5 +28,3 @@ class Coronajogador:
         
     def estado(self,jorge): 
         self.vivo = jorge
-
-#Coronajogador()
