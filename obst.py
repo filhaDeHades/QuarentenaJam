@@ -4,7 +4,7 @@ from random import randint
 class Obstaculos:
     obsX = 0
     obsY = 0
-    obsSpeed = -1
+    obsSpeed = -2
     objeto = 0
     tipo = [[0,112],[16, 112],[32, 112],[48, 112], [64, 112], [80, 112], [96, 112], [112,112]]
     state = "PERDEU"

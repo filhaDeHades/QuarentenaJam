@@ -4,10 +4,14 @@ Jogo criado para a quarentena jam
 ## Objetivo:
 Temos como objetivo criar um jogo para a **Quarentine Jam** cujo tema é "E se?... Corona Vírus Edition", essa Game Jam foi criada com o objetivo de incentivar as pessoas a ficarem em casa durante a epidemia do covid-19.
 
+A ideia é criar um jogo simples e fácil de jogar que consiga conscientizar e entreter através do humor, por isso foi decido pela criação de um jogo no estilo __**infinity run**__.
+
 ## Descrição do Jogo:
+**Jornada de um Corona**
 Corona Vairus!
-É um jogo no qual o corona vírus é o protagonista e viaja o mundo infectando pessoas e desviando de obstáculos.
-Ajude-o a chegar o mais longe possível.
+"Jornada de um Corona" é um jogo no qual o corona tenta viajar o mundo desviando do máximo de obstáculos possíveis e, é claro, infectando pessoas.
+Quantos pontos você consegue fazer?
+
 ## Descrição da criação do Jogo:
 ### Brainstorm:
  1. As etapas do jogo e o tipo.
@@ -16,26 +20,37 @@ Ajude-o a chegar o mais longe possível.
  1. Número de telas.
  1. Quantidade de músicas necessárias.
 
+ ### Desenvolvimento:
+ 1. Foi decidido que a tela de configuração não é necessária
+ 1. Todos os assets foram criados com a ferramenta de criação de __tiles__ da biblioteca ([pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"))
+ 1. Utilização do Visual Studio Code no desenvolvimento do projeto
+ 1. Integração das telas do jogo é dada pelo arquivo app.py
+
 ## Checklist:
 - [X] Definir o tipo do jogo.
 - [X] Criar o menu de Iniciar (Dudu)
-- [ ] Criação do Corona (Dudu)
+- [X] Criação do Corona (Dudu)
     - [X] Adicionar e configurar os comandos
     - [x] Design do Corona
-    - [ ] Adicionar área de morte do Corona
+    - [X] Adicionar área de morte do Corona
 - [X] Criar o menu de Pausa (Amanda)
-- [ ] Design dos personagens (Vieira e Lanza)
+- [X] Design dos personagens (Vieira e Lanza)
 - [ ] ~~Criar o menu de Configuração (Amanda)~~
-    - [ ] Add a configuração da música a tela iniciar (Amanda)
-- [ ] Criar o menu de Créditos (Tamires)
+    - [X] Add a configuração da música a tela iniciar (Amanda)
+- [X] Criar o menu de Créditos (Tamires)
     - [X] Adicionar a base da rolagem dos nomes (Tamires)
     - [X] Adicionar o desaparecimento ao chegar no título (Tamires)
     - [X] Adicionar loop infinito (Tamires)
-- [ ] Criar tela-mãe do jogo (Tamires)
+- [X] Criar tela-mãe do jogo (Tamires)
     - [X] Add tela do Menu Iniciar
     - [x] Add tela do Menu de Pausa
-    - [ ] Add tela do Jogo
+    - [X] Add tela do Jogo
     - [X] Add tela de Créditos
+- [X] Criar arte do Título (Lanza)
+- [X] Criar as músicas (Amanda)
+- [ ] Adicionar a música ao jogo (Amanda e Dudu)
+- [ ] Adicionar a tela de GameOver (Amanda e Dudu)
+- [ ] Adicionar pontuação ao Jogo (Tamires)
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")

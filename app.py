@@ -5,7 +5,7 @@ import jogo as j
 import creditos as c
 
 class App:
-    stat = "PAUSA"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
+    stat = "MENU"         #estados possiveis: "MENU"; "PAUSA"; "JOGO"; "CREDITOS";
     status = [mi.Iniciar(180, 80), mp.Pause(180, 80), j.Jogo(180, 80), c.Creditos(180, 80)]
     width = 0
     height = 0
@@ -71,7 +71,7 @@ class App:
             prox = self.status[2].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #VOLTAR
-                    self.stat = "MENU"
+                    self.stat = "PAUSA"
         
         elif self.stat == "CREDITOS":
             prox = self.status[3].mouse()

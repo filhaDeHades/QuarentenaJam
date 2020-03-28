@@ -25,7 +25,7 @@ class Pause:
     def draw(self):
         pyxel.cls(3)
         pyxel.text(75, 10, "PAUSADO", pyxel.frame_count % 16)
-        pyxel.blt(self.width/2-16, self.height/2, 0, 0, 0, 28, 16, 0)
+        pyxel.blt(self.width/2-16, self.height/2, 0, 0, 0, 29, 12, 0)
         pyxel.blt(self.width/2-18, self.height/4*3, 0, 40, 0, 32, 16, 0)
     
     def mouse(self):
