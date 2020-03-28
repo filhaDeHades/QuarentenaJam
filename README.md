@@ -51,8 +51,8 @@ Quantos pontos você consegue fazer?
     - [X] Add tela de Créditos
 - [X] Criar arte do Título (Lanza)
 - [X] Criar as músicas (Amanda)
-- [ ] Adicionar a música ao jogo (Amanda e Dudu)
-- [ ] Adicionar a tela de GameOver (Amanda e Dudu)
+- [ ] Adicionar a música ao jogo (Tamires)
+- [ ] Adicionar a tela de GameOver (Tamires)
 - [ ] Adicionar pontuação ao Jogo (Tamires)
 
 ## Integrantes do Grupo:

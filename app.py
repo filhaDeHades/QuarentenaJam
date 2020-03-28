@@ -10,6 +10,8 @@ class App:
     status = [mi.Iniciar(180, 80), mp.Pause(180, 80), j.Jogo(180, 80), c.Creditos(180, 80), go.GameOver(180, 80)]
     width = 0
     height = 0
+    sound = True
+    soundChange = True
     def __init__(self, w, h):
         self.width = w
         self.height = h
@@ -20,6 +22,9 @@ class App:
     def update(self):
         if pyxel.btn(pyxel.KEY_Q):
             pyxel.quit()
+
+        if self.soundChange == True:
+            self.play_music()
 
         self.mudaEstado()
 
@@ -52,46 +57,72 @@ class App:
             prox = self.status[0].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #Música ON
-                    pass
+                    self.sound = True
+                    self.soundChange = True
                 elif prox[1] == 1: #Música OFF
-                    pass
+                    self.sound = False
+                    self.soundChange = True
                 elif prox[1] == 2: #Creditos
                     self.stat = "CREDITOS"
+                    self.soundChange = True
                 elif prox[1] == 3: #Iniciar
                     self.stat = "JOGO"
+                    self.soundChange = True
         
         elif self.stat == "PAUSA":
             prox = self.status[1].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #Música ON
-                    pass
+                    self.sound = True
+                    self.soundChange = True
                 elif prox[1] == 1: #Música OFF
-                    pass
+                    self.sound = False
+                    self.soundChange = True
                 elif prox[1] == 2: #JOGAR
                     self.stat = "JOGO"
+                    self.soundChange = True
                 elif prox[1] == 3: #SAIR
                     self.stat = "MENU"
+                    self.soundChange = True
         
         elif self.stat == "JOGO":
             prox = self.status[2].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #VOLTAR
                     self.stat = "PAUSA"
+                    self.soundChange = True
         
         elif self.stat == "CREDITOS":
             prox = self.status[3].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #VOLTAR
                     self.stat = "MENU"
+                    self.soundChange = True
         
         elif self.stat == "GAMEOVER":
             prox = self.status[4].mouse()
             if prox[0] == True:
                 if prox[1] == 0: #Música ON
-                    pass
+                    self.sound = True
+                    self.soundChange = True
                 elif prox[1] == 1: #Música OFF
-                    pass
+                    self.sound = False
+                    self.soundChange = True
                 elif prox[1] == 2: #SAIR
                     self.stat = "MENU"
+                    self.soundChange = True
+    
+
+    def play_music(self):
+        if self.sound == True:
+            if self.stat == "MENU" or self.stat == "PAUSA" or self.stat == "CREDITOS":
+                pyxel.play(1, 0, loop=True)
+            if self.stat == "JOGO":
+                pyxel.play(1, 2, loop=True)
+            if self.stat == "GAMEOVER":
+                pyxel.play(1, 3, loop=True)
+        else:
+            pyxel.stop(1)
+        self.soundChange = False
 
 App(180, 80)
