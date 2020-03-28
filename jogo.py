@@ -18,9 +18,11 @@ class Jogo:
     def __init__(self, w, h):
         self.player.x = 20
         self.player.y = 25
+        self.player.estado(True)
         self.width = w
         self.height = h
         self.status = "JOGANDO"
+        self.pontos = 0
         for i in self.objetos:
             i.setX(180)
         a = fundo.Fundo(0,0,180,80,0)
@@ -43,11 +45,24 @@ class Jogo:
     # ------------------------ CONFIGURAÇÃO DOS OBSTÁCULOS -----------------------------
         for i in self.objetos:
             i.update()
-            i.setState("JOGANDO")
         for i in range(len(self.objetos)):
-            if self.objetos[i].obsX < -16:
+            if self.objetos[i].obsX < 4:
+                self.pontos += 5
                 del(self.objetos[i])
                 break
+    # ------------------------ CONFIGURAÇÃO DE COLISÕES --------------------------------
+        for i in self.objetos:
+            if self.player.x > i.obsX and self.player.x <= i.obsX+16:
+                if self.player.y > i.obsY and self.player.y <= i.obsY+16:
+                    self.player.estado(False)
+                    for j in range(len(self.objetos)):
+                        self.objetos[j].setState("PERDEU")
+                    break
+            else:
+                for j in range(len(self.objetos)):
+                        self.objetos[j].setState("JOGANDO")
+
+
     # -------------------------- CONFIGURAÇÃO DO FUNDO ---------------------------------
         for i in range(len(self.fundos)):
             if self.fundos[i].x + self.fundos[i].w == 180:
@@ -68,6 +83,7 @@ class Jogo:
             i.draw()
         for i in self.objetos:
             i.draw()
+        pyxel.text(2, 72, f"Pontos {self.pontos}", 10)
         if self.animplayer == 1:
             self.count += 1
         if self.count >= 10:

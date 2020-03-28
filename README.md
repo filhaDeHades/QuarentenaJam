@@ -1,10 +1,10 @@
 # QuarentenaJam
-Jogo criado para a quarentena jam
+Jogo criado para a [quarentena jam](https://itch.io/jam/quarentena-jam) em março de 2020.
 
 ## Objetivo:
 Temos como objetivo criar um jogo para a **Quarentine Jam** cujo tema é "E se?... Corona Vírus Edition", essa Game Jam foi criada com o objetivo de incentivar as pessoas a ficarem em casa durante a epidemia do covid-19.
 
-A ideia é criar um jogo simples e fácil de jogar que consiga conscientizar e entreter através do humor, por isso foi decido pela criação de um jogo no estilo __**infinity run**__.
+A ideia é criar um jogo simples e fácil de jogar que consiga conscientizar e entreter através do humor, por isso foi decido pela criação de um jogo no estilo **_infinity run_**.
 
 ## Descrição do Jogo:
 **Jornada de um Corona**
@@ -13,6 +13,9 @@ Corona Vairus!
 Quantos pontos você consegue fazer?
 
 ## Descrição da criação do Jogo:
+### Antes do Início da Jam:
+    Foi definido que a tecnologia usada para a criação do jogo seria uma engine nova do python feita para a criação de jogos com estilo retrô. A biblioteca [Pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"). 
+
 ### Brainstorm:
  1. As etapas do jogo e o tipo.
  1. A funcionalidade do menu.
@@ -22,7 +25,7 @@ Quantos pontos você consegue fazer?
 
  ### Desenvolvimento:
  1. Foi decidido que a tela de configuração não é necessária
- 1. Todos os assets foram criados com a ferramenta de criação de __tiles__ da biblioteca ([pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"))
+ 1. Todos os assets foram criados com a ferramenta de criação de _tiles_ da biblioteca ([pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"))
  1. Utilização do Visual Studio Code no desenvolvimento do projeto
  1. Integração das telas do jogo é dada pelo arquivo app.py
 
