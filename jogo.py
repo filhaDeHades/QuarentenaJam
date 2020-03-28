@@ -94,6 +94,16 @@ class Jogo:
     
     def mouse(self):
         if pyxel.btn(pyxel.KEY_ENTER):
-            print([True, 0])
             return [True, 0]
+        if self.player.vivo == False:
+            return[True, 1, self.pontos]
         return [False]
+    
+    def reset(self):
+        self.player.x = 20
+        self.player.y = 25
+        self.pontos = 0
+        self.objetos = []
+        self.contframes = 0
+        self.animplayer = 0
+        self.count = 0

@@ -12,6 +12,8 @@ class App:
     height = 0
     sound = True
     soundChange = True
+    pontos = 0
+    estadoJogador = True
     def __init__(self, w, h):
         self.width = w
         self.height = h
@@ -38,6 +40,7 @@ class App:
             self.status[3].update()
         elif self.stat == "GAMEOVER":
             self.status[4].update()
+        self.status[4].setPontos(self.pontos)
 
     def draw(self):
         pyxel.cls(3)
@@ -66,6 +69,7 @@ class App:
                     self.stat = "CREDITOS"
                     self.soundChange = True
                 elif prox[1] == 3: #Iniciar
+                    self.status[2].reset()
                     self.stat = "JOGO"
                     self.soundChange = True
         
@@ -91,6 +95,10 @@ class App:
                 if prox[1] == 0: #VOLTAR
                     self.stat = "PAUSA"
                     self.soundChange = True
+                elif prox[1] == 1:
+                    self.stat = "GAMEOVER"
+                    self.soundChange = True
+                    self.pontos = prox[2]
         
         elif self.stat == "CREDITOS":
             prox = self.status[3].mouse()
@@ -107,6 +115,10 @@ class App:
                     self.soundChange = True
                 elif prox[1] == 1: #Música OFF
                     self.sound = False
+                    self.soundChange = True
+                elif prox[1] == 2: #JOGO
+                    self.status[2].reset()
+                    self.stat = "JOGO"
                     self.soundChange = True
                 elif prox[1] == 2: #SAIR
                     self.stat = "MENU"

@@ -13,7 +13,7 @@ class Coronajogador:
         pyxel.blt(self.x, self.y, 0, self.anim[tipo][0], self.anim[tipo][1], 16, 16, 3)
 
     def update(self):
-        if self.y >= 80:
+        if self.y >= 65:
             self.estado(False)
         else:
             self.estado(True)

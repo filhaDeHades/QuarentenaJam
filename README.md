@@ -14,7 +14,7 @@ Quantos pontos você consegue fazer?
 
 ## Descrição da criação do Jogo:
 ### Antes do Início da Jam:
-    Foi definido que a tecnologia usada para a criação do jogo seria uma engine nova do python feita para a criação de jogos com estilo retrô. A biblioteca [Pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"). 
+Foi definido que a tecnologia usada para a criação do jogo seria uma engine nova do python feita para a criação de jogos com estilo retrô. A biblioteca [Pyxel](https://github.com/kitao/pyxel "Biblioteca Pyxel"). 
 
 ### Brainstorm:
  1. As etapas do jogo e o tipo.
@@ -51,9 +51,9 @@ Quantos pontos você consegue fazer?
     - [X] Add tela de Créditos
 - [X] Criar arte do Título (Lanza)
 - [X] Criar as músicas (Amanda)
-- [ ] Adicionar a música ao jogo (Tamires)
-- [ ] Adicionar a tela de GameOver (Tamires)
-- [ ] Adicionar pontuação ao Jogo (Tamires)
+- [X] Adicionar a música ao jogo (Tamires)
+- [X] Adicionar a tela de GameOver (Tamires)
+- [X] Adicionar pontuação ao Jogo (Tamires)
 
 ## Integrantes do Grupo:
 - [Amanda Melo](https://github.com/amanda-06 "Perfil da Amanda")

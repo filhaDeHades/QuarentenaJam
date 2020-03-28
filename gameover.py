@@ -7,7 +7,6 @@ class GameOver:
     def __init__(self, w, h):
         self.width = w
         self.height = h
-        #self.play_music (True)
 
     def play_music(self, ch0):
         if ch0:
@@ -15,14 +14,10 @@ class GameOver:
         else:
             pyxel.stop(0)
 
-    def update(self, p = 0):
-        self.pontos = p
+    def update(self):
         pyxel.mouse(True)
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
-
-        #if pyxel.btnp(pyxel.KEY_1):
-            #self.play_music (True)
 
     def draw(self):
         pyxel.cls(0)
@@ -35,16 +30,23 @@ class GameOver:
     def mouse(self):
         if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
             if pyxel.mouse_x >= self.width/2-16 and pyxel.mouse_x <= (self.width/2-16)+8:
-                if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12: #MÚSICA ON
+                if pyxel.mouse_y >= self.height/2+6 and pyxel.mouse_y <= (self.height/2)+10: #MÚSICA ON
                     return [True, 0]
-            if pyxel.mouse_x >= self.width/2+1 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
-                if pyxel.mouse_y >= self.height/2+8 and pyxel.mouse_y <= (self.height/2)+12:
+            if pyxel.mouse_x >= self.width/2 and pyxel.mouse_x <= self.width/2+11: #MÚSICA OFF
+                if pyxel.mouse_y >= self.height/2+6 and pyxel.mouse_y <= (self.height/2)+10:
                     return [True, 1]
+            if pyxel.mouse_x >= self.width/2-18+7 and pyxel.mouse_x <= (self.width/2-18)+7+18: #JOGAR
+                if pyxel.mouse_y >= self.height/4*3 and pyxel.mouse_y <= (self.height/4*3)+4:
+                    return [True, 2]
             if pyxel.mouse_x >= self.width/2-18+10 and pyxel.mouse_x <= self.width/2-18+21: #SAIR
                 if pyxel.mouse_y >= (self.height/4*3)+9 and pyxel.mouse_y <= (self.height/4*3)+14:
-                    return [True, 2]
+                    return [True, 3]
         
         return [False]
+    
+
+    def setPontos(self, p):
+        self.pontos = p
                 
         
 #GameOver(180, 80)
