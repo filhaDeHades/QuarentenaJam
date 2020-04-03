@@ -40,8 +40,9 @@ class Jogo:
             obj.setX(180)
             self.objetos.append(obj)
     # -------------------------- CONFIGURAÇÃO DO JOGADOR -------------------------------
-        if self.player.update() == 1:
-            self.animplayer = 1
+        self.player.update()
+        #if self.player.update() == 1:
+            #self.animplayer = 1
     # ------------------------ CONFIGURAÇÃO DOS OBSTÁCULOS -----------------------------
         for i in self.objetos:
             i.update()
